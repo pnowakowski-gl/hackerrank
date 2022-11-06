@@ -1,14 +1,12 @@
 import re
-str1 = 'rabcdeefgyYhFjkIoomnpOeorteeeeet'
+
+str1 = "rabcdeefgyYhFjkIoomnpOeorteeeeet"
 str2 = "bII1io2-aaa+aaab"
 str3 = "abaabaabaabaaefEAEOUOIouf"
 consonats = "QWRTYPSDFGHJKLZXCVBNMqwrtypsdfghjklzxcvbnm"
 
 str_ = str2
-found = [i.group(1) for i in re.finditer(r'([aeiouAEIOU]{2,})', str_)]
-found2 = re.findall(r'([aeiouAEIOU]{2,})', str_)
-print(found)
-print(found2)
+found = re.finditer(r"([aeiouAEIOU]{2,})", str_)
 matches = 0
 if found:
     for f in found:

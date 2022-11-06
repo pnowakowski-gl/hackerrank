@@ -1,5 +1,6 @@
 from re import search
 
+
 def card_number(number):
     first_num = search(r"^[4-6]", number)
     if not first_num:
@@ -16,11 +17,13 @@ def card_number(number):
             return print("Valid")
     else:
         return print("Invalid")
-card_number("5133-3367-8912-3456") # Invalid
-card_number("4123456789123456") # Valid
-card_number("5123-4567-8912-3456") # Valid
-card_number("61234-567-8912-3456") # Invalid
-card_number("4123356789123456") # Valid
-card_number("5123 - 3567 - 8912 - 3456") # Invalid
-card_number("2123356789123456") # Invalid
-card_number("4123356789121111") # Invalid
+
+
+card_number("5133-3367-8912-3456")  # Invalid
+card_number("4123456789123456")  # Valid
+card_number("5123-4567-8912-3456")  # Valid
+card_number("61234-567-8912-3456")  # Invalid
+card_number("4123356789123456")  # Valid
+card_number("5123 - 3567 - 8912 - 3456")  # Invalid
+card_number("2123356789123456")  # Invalid
+card_number("4123356789121111")  # Invalid
